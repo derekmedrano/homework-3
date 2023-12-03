@@ -44,12 +44,10 @@ function generatePassword() {
 
 	var finalString = allChars.split('')
 
-
 	for (var i = 0; i < lengthQuestion; i++) {
-		console.log(random(finalString))
-		
+	password.concat(random(finalString))
 	}
-
+	
 	return password
 }
 
@@ -60,6 +58,8 @@ function writePassword() {
 
 	passwordText.value = password;
 }
+
+
 
 
 function random(arr) {
