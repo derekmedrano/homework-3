@@ -1,6 +1,14 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+// Write password to the #password input
+function writePassword() {
+	var password = generatePassword();
+	var passwordText = document.querySelector("#password");
+
+	passwordText.value = password;
+}
+
 function generatePassword() {
 	var lengthQuestion = prompt("What is your desired password length? Must be 8 - 128 characters.")
 
@@ -19,7 +27,7 @@ function generatePassword() {
 		alert("Password requirement not met.")
 		return;
 	}
-	var password = ''
+	
 	var allChars = ''
 	var lowercase = "abcdefghijklmnopqrstuvwxyz"
 
@@ -44,23 +52,14 @@ function generatePassword() {
 
 	var finalString = allChars.split('')
 
+	var passwordArray=[];
+
 	for (var i = 0; i < lengthQuestion; i++) {
-	password.concat(random(finalString))
+	passwordArray.push(random(finalString));
 	}
 	
-	return password
+	return passwordArray.join('')
 }
-
-// Write password to the #password input
-function writePassword() {
-	var password = generatePassword();
-	var passwordText = document.querySelector("#password");
-
-	passwordText.value = password;
-}
-
-
-
 
 function random(arr) {
 
