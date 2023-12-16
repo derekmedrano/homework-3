@@ -7,9 +7,12 @@
 ## Installation
 N/A
 ## Usage
+Deployed application: https://derekmedrano.github.io/random-password-generator/
+
 [Screenshot of Project](assets/images/hw3ss.jpg)
 
 User is given series of prompts and confirmations. If the requirements are met, it will generate a random password using the user given criteria. The password will then be displa
+
 ## Credits
 w3schools
 https://www.w3schools.com/js/default.asp
